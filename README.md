@@ -166,6 +166,27 @@ O Amazon S3 oferece diferentes **classes de armazenamento** para equilibrar cust
 
 O diagrama representa a arquitetura de um sistema na AWS, mostrando como os serviços interagem para processar e armazenar dados.
 
+## Arquitetura Serverless mínima — S3 + Lambda
+
+![Desafio AWS](https://github.com/user-attachments/assets/42fce601-0637-4bcc-9f0e-0da853d27599)
+
+### Fluxo resumido
+
+1. Usuário faz upload no S3.
+2. Evento ObjectCreated dispara a Lambda.
+3. Lambda processa e grava resultado em S3.
+
+
+## Arquitetura Simples com VM — EC2 + EBS + S3
+   
+![Desafio AWS (1)](https://github.com/user-attachments/assets/cf46337a-4a8a-4a49-bf1b-d14222a7581c)
+
+### Fluxo resumido
+
+1. Usuário envia arquivo ao S3 (ou diretamente para a EC2).
+2. EC2 baixa do S3, processa usando EBS para armazenamento de bloco.
+3. EC2 salva resultados no S3 (opcional)
+
 ---
 
 ## Conclusão
